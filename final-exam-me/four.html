@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Problem 4</title>
+</head>
+
+<body>
+    <nav>
+        <a href="one.html">Problem 1</a> |
+        <a href="two.html">Problem 2</a> |
+        <a href="three.html">Problem 3</a> |
+        <a href="four.html">Problem 4</a> |
+        <a href="five.html">Problem 5</a> |
+        <a href="six.html">Problem 6</a> |
+        <a href="seven.html">Problem 7</a> |
+        <a href="eight.html">Problem 8</a> |
+        <a href="vue/index.html" target="_blank">Problem 9</a>
+    </nav><br><br>
+    <h1>Problem 3</h1><br>
+    <p id="Paragraph">This is a paragraph</p>
+    <div>
+        <button onclick="Style('bold')">Bold</button>
+        <button onclick="Style('italic')">Italic</button>
+        <button onclick="Style('underline')">Underline</button>
+    </div>
+
+    <script>
+        function Style(style) {
+            const paragraph = document.getElementById('Paragraph');
+            switch (style) {
+                case 'bold':
+                    paragraph.style.fontWeight = paragraph.style.fontWeight === 'bold' ? 'normal' : 'bold';
+                    break;
+                case 'italic':
+                    paragraph.style.fontStyle = paragraph.style.fontStyle === 'italic' ? 'normal' : 'italic';
+                    break;
+                case 'underline':
+                    paragraph.style.textDecoration = paragraph.style.textDecoration === 'underline' ? 'none' : 'underline';
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

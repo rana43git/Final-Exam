@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Problem 2</title>
+    <style>
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="one.html">Problem 1</a> |
+        <a href="two.html">Problem 2</a> |
+        <a href="three.html">Problem 3</a> |
+        <a href="four.html">Problem 4</a> |
+        <a href="five.html">Problem 5</a> |
+        <a href="six.html">Problem 6</a> |
+        <a href="seven.html">Problem 7</a> |
+        <a href="eight.html">Problem 8</a> |
+        <a href="vue/index.html" target="_blank">Problem 9</a>
+    </nav><br><br>
+    <h1>Problem 2</h1><br>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="contactTableBody">
+            <!-- JavaScript will populate this section -->
+        </tbody>
+    </table>
+
+    <script>
+        // JSON data
+        var jsonData = [
+            { "id": "111", "full_name": "Imran Hasan", "mobile": "01711-235611", "email": "imran@yopmail.com" },
+            { "id": "222", "full_name": "John David", "mobile": "01722-235622", "email": "david@yopmail.com" },
+            { "id": "333", "full_name": "Hasan Ali", "mobile": "01733-235633", "email": "ali@yopmail.com" },
+            { "id": "444", "full_name": "Mohammad Ibrahim", "mobile": "01744-235644", "email": "ibrahim@yopmail.com" },
+            { "id": "555", "full_name": "Sajal Dutta", "mobile": "01755-235655", "email": "sajal@yopmail.com" }
+        ];
+
+        // Function to generate HTML table rows
+        function generateTableRows(data) {
+            var rows = '';
+            data.forEach(function (item) {
+                rows += '<tr>';
+                rows += '<td>' + item.id + '</td>';
+                rows += '<td>' + item.full_name + '</td>';
+                rows += '<td>' + item.mobile + '</td>';
+                rows += '<td>' + item.email + '</td>';
+                rows += '</tr>';
+            });
+            return rows;
+        }
+
+        // Populate the table body with data
+        document.getElementById('contactTableBody').innerHTML = generateTableRows(jsonData);
+    </script>
+</body>
+
+</html>
